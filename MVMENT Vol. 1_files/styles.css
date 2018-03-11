@@ -196,7 +196,7 @@ body {
   background-color: #212121; }
 
 .wrapper {
-
+  width: 80%;
   margin: 0 10%; }
 
 /* Make the body 100% of the browser viewport height */
@@ -286,15 +286,11 @@ h1 {
   }
 
   #blur {
-    background:     linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ), url(../img/fear_blurred.jpg) no-repeat center center;
+    background: url(../img/fear_blurred.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
   }
 
   .blur {
@@ -414,18 +410,6 @@ nav {
 }
 
 /* =Main */
-
-.fear h1 {
-  text-align: center;
-}
-
-.fear {
-  width: 80%;
-  text-align: justify;
-  margin: auto;
-  padding: 10%;
-}
-
 p {
   font-size: 16px; }
 
@@ -438,13 +422,11 @@ p {
   .slide .wrapper {
     padding-top: 30px;
     text-align: center;
-    position: absolute;
+    position: relative;
     z-index: 2; }
   .slide#slide01 .wrapper {
-    position: relative;
-    top:500px;
-    overflow:hidden;
-   }
+    position: absolute;
+    top: 10%; }
   .slide#slide02 .wrapper {
     color: #ffffff;
     position: absolute;
@@ -481,7 +463,7 @@ p {
   color: rgba(255, 255, 255, 0.9); }
   .content-block .wrapper {
     padding: 30px 0;
-    text-align: left; }
+    text-align: center; }
   .no-touch .content-block .wrapper {
     visibility: hidden;
     opacity: 0; }
@@ -560,6 +542,8 @@ p {
   .slide {
     overflow: hidden;
     overflow-x: hidden; }
+    .slide section {
+      max-width: 400px; }
     .slide .wrapper {
       padding-top: 120px;
       position: absolute;
@@ -569,7 +553,7 @@ p {
           -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       text-align: right;
-
+      width: 100%;
       margin: 0; }
     .slide#slide01, .slide#slide02, .slide#slide03 {
       color: #212121; }
