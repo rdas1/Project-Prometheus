@@ -276,14 +276,26 @@ h1 {
     z-index: 2;
     position: relative; }
 
-.bcg {
-  background: no-repeat center center;
-  background-size: cover;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0.5; }
+  .bcg {
+    background: no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  #blur {
+    background: url(../img/fear_blurred.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .blur {
+    opacity: 0;
+  }
 
   #slide01 .bcg {
     background: url(../img/fear.jpg) no-repeat center center;
@@ -550,8 +562,21 @@ p {
         text-align: center; }
       .slide#slide01 section, .slide#slide02 section, .slide#slide03 section {
         margin: 0 auto; }
-    .slide#slide01 {
-      color: #ffffff; }
+
+        .slide#slide01 {
+          color: #ffffff; }
+          .slide#slide01 .wrapper {
+            top: auto;
+            bottom: 40%;
+            left: 60%;
+            text-align: left;
+            -webkit-transform: translate(0);
+                -ms-transform: translate(0);
+                    transform: translate(0);
+            padding: 0; }
+          .slide#slide01 section {
+            margin: 0; }
+
     .slide#slide02 {
       color: #ffffff; }
       .slide#slide02 .wrapper {
@@ -696,8 +721,4 @@ p {
   left: 0;
   right: 0;
   z-index: -1;
-}
-
-.blurred-img {
-  opacity: 0;
 }

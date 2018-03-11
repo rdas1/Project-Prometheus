@@ -104,15 +104,19 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
             </article>
             <div class="content-div">
             <article id="slide01" class="slide fs info">
-              <div class="bcg" id="bcg1"></div>
-                <div class="wrapper s1" id="s1">
-                    <header class="slideInUp">
-                        <h1>Artwork + Poem/Article</h1>
-                    </header>
-                    <section>
-                        <p class="slideInUp slideInUp2">I'll put the artwork/text here later, probably with that blur animation</p>
-                    </section>
-                </div> <!-- .wrapper -->
+              <div class="bcg" id="bcg1">
+              <div class="blur" id="blur">
+                <div class="wrapper">
+                  <header class="slideInUp">
+                      <h1>Fear</h1>
+                  </header>
+                  <section>
+                      <p class="slideInUp slideInUp2">is not the rush you get when you send a risky text to the boy you like, or the distance that you leap in the air when</p>
+                      <p class="slideInUp slideInUp3">a spider crawls across your pillow, instead, fear is the wave of temporary paralysis that</p>
+                  </section>
+                </div> <!-- .wrapper --></div>
+              </div>
+
               </div>
             </article>
           </div>
@@ -129,7 +133,7 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
 
             <article id="slide02" class="slide fs info">
                 <div class="bcg"></div>
-                <div class="wrapper blur">
+                <div class="wrapper">
                     <header class="slideInUp">
                         <h1>Fear</h1>
                     </header>
@@ -234,13 +238,14 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
 						}
 					);
           */
-          var tween = new TweenMax.to('.fadein', 1.5, {
+          var logo_tween = new TweenMax.to('.fadein', 1.5, {
             opacity: 1,
-            className:"+= animate"
+            //className:"+= animate"
           });
-          /*.to('.gradient', 1.5, {
-            className:"+= animated bounce infinite"
-          });*/
+
+          var blur_tween = new TweenMax.to('.blur', 0.5, {
+            opacity: 1,
+          });
 
           // init controller
           var controller = new ScrollMagic.Controller({
@@ -252,25 +257,41 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
 					var scene1 = new ScrollMagic.Scene({
 						triggerHook: 0,
 						triggerElement: '#intro',
-						duration: 900,
+						duration: "130%",
 						reverse: true
 					})
-          .setTween(tween)
+          .setTween(logo_tween)
 					.setPin('#intro')
-					.addTo(controller);
 
-          /*
+          var scene2 = new ScrollMagic.Scene({
+            triggerHook: 0,
+            triggerElement: "#slide01",
+            duration: "300%",
+            reverse: true
+          })
+          .setTween(blur_tween)
+          .setPin("#slide01")
+
+          controller.addScene([
+            scene1,
+            scene2,
+          ]);
+
+
           // var el = $('#bcg-blurred');
-          var blur_tween = new TweenMax.to('.blur', 1.5 {
+          /*var blur_tween = new TweenMax.to('.blur', 1.5 {
             opacity: 1
-          });
-
+          });*/
+          /*
           var scene2 = new ScrollMagic.Scene({triggerElement: "#slide01", duration: "100%", reverse: true})
                   .setTween(blur_tween)
                   .setPin("#slide01")
       						.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
       						.addTo(controller);
           */
+      						//.addTo(controller);
+
+          //controller.add(scene1);
 
         </script>
     </body>
