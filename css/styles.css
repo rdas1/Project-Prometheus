@@ -510,13 +510,13 @@ p {
   }
 
   .speakTitle {
-    text-align: center;
+    text-align: left;
     display: inline;
   }
 
   .speakDescText{
-    display: block;
-    margin: auto;
+    display: inline-block;
+    float: right;
     width: 50%;
   }
 
