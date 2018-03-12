@@ -319,6 +319,29 @@ h1 {
     background: url(../img/dolls_dresses_daises.jpg) no-repeat center center;
     background-size: cover; }
 
+  #slide02 .bcg {
+    background: url(../img/dolls_dresses_daises.jpg) no-repeat center center;
+    background-size: cover; }
+
+    .imageTitle img {
+      max-width: 800px;
+      max-height: 600px;
+      width: 100%;
+      height: auto;
+    }
+
+    .imageTitle {
+      width: 100%;
+      height: auto;
+    }
+
+
+    #cb05 img{
+      display:block;
+      margin:auto;
+    }
+
+
 /* =Navigation */
 nav {
   display: none;
@@ -441,7 +464,8 @@ p {
 
 .slide {
   color: #ffffff;
-  position: relative; }
+  position: relative;
+}
   .slide .wrapper {
     padding-top: 30px;
     text-align: left;
@@ -471,8 +495,42 @@ p {
     color: #283039;
   }
 
-  .content-block .wrapper {
+  .content-block.speak1 {
+    background: #a0a0a2;
+    background: -webkit-linear-gradient(#a0a0a2, #6e6761);
+    background: -moz-linear-gradient(#a0a0a2, #6e6761);
+    background: -ms-linear-gradient(#a0a0a2, #6e6761);
+    background: -o-linear-gradient(#a0a0a2, #6e6761);
+    background: linear-gradient(#a0a0a2, #6e6761);
+    color: #fff;
+  }
 
+  .content-block.speak2{
+    background: #6e6761;
+    background: -webkit-linear-gradient(#6e6761, #a0a0a2);
+    background: -moz-linear-gradient(#6e6761, #a0a0a2);
+    background: -ms-linear-gradient(#6e6761, #a0a0a2);
+    background: -o-linear-gradient(#6e6761, #a0a0a2);
+    background: linear-gradient(#6e6761, #a0a0a2);
+  }
+
+  .speakTitle {
+    text-align: center;
+    display: inline;
+  }
+
+  .speakDescText{
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
+  .speakDesc {
+    text-align: center;
+    display: inline;
+  }
+
+  .content-block .wrapper {
     text-align: left;
   }
   .no-touch .content-block .wrapper {
@@ -617,6 +675,8 @@ p {
       background-color: transparent;
       color: #283039; }
     .slide#slide03 .bcg {
+      background: #fff no-repeat center center;
+      background-size: cover;
       opacity: 1; }
   nav {
     display: block; }
