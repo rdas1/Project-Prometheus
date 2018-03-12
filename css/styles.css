@@ -281,8 +281,8 @@ h1 {
     background-size: cover;
     position: absolute;
     width: 100%;
-    height: 100%;
-
+    min-height: 100%;
+    flex-grow: 1;
   }
 
   #blur {
@@ -300,12 +300,20 @@ h1 {
     opacity: 0;
   }
 
+  #slide01 {
+    display: flex;
+    flex-direction: column;
+    min-height: 110vh;
+  }
+
   #slide01 .bcg {
     background: url(../img/fear.jpg) no-repeat center center;
-    background-size: cover; }
+    background-size: cover;
+    flex-grow: 1;
+  }
 
   #slide02 .bcg {
-    background: url(../img/img_mountains01.jpg) no-repeat center center;
+    background: url(../img/dolls_dresses_daises.jpg) no-repeat center center;
     background-size: cover; }
   #slide03 .bcg {
     background: url(../img/img_mountains03.jpg) no-repeat center center;
@@ -423,6 +431,7 @@ nav {
   text-align: justify;
   margin: auto;
   padding: 10%;
+  flex: 1;
 }
 
 p {
@@ -442,7 +451,6 @@ p {
   .slide#slide01 .wrapper {
     position: relative;
     top:500px;
-    overflow:hidden;
    }
   .slide#slide02 .wrapper {
     color: #ffffff;
@@ -568,6 +576,7 @@ p {
     .slide .wrapper {
       padding-top: 120px;
       position: absolute;
+
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
@@ -577,7 +586,8 @@ p {
 
       margin: 0; }
     .slide#slide01, .slide#slide02, .slide#slide03 {
-      color: #212121; }
+      color: #212121;
+    }
       .slide#slide01 .wrapper, .slide#slide02 .wrapper, .slide#slide03 .wrapper {
         top: 20%;
         text-align: center; }

@@ -110,8 +110,13 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
                     <header class="slideInUp">
                         <h1>Fear</h1>
                     </header>
-                    <section>
+                    <section class="fear-text">
                         <p class="slideInUp slideInUp2">is not the rush you get when you send a risky text to the boy you like, or the distance that you leap in the air when a spider crawls across your pillow; instead, fear is the wave of temporary paralysis that sweeps through your body when you feel an unwanted hand on your back, the pressure that accompanies the touch, telling you something and not asking, and it is your body forcing you to cross the street because the man behind you is walking a little too closely, and fear is the pace of your run, the pace that is always just a bit slower than you know you can run because you always want the option of escape and it is the trunk of the car that you open before every car ride (just in case) and it is the way your eyes scan the back seat of the car for hidden shadows, and fear is your teeth biting down on your friend’s hand (with the reflexes that come with being sexually assaulted) because she grazed your neck while trying to fix the clasp of your necklace, this is the same kind of fear that froze your whole body as if it were ready for an autopsy when he grabbed your neck and pinned you to the wall of the bathroom, and the fear that comes from the sound of a door being locked and the chance of any escape being taken away from you, it is the stubby nails that held your hand down because it was shaking too much for his liking, and the fear of seeing a bad grade on your report card is not the same fear of your body not being yours anymore, or the knowledge that any of these things could happen to a future daughter of yours. That is fear.
+
+
+
+                          <br><br>
+                          <i>Illustration by Olivia DeFazio</i>
                         </p>
                     </section>
                   </div>
@@ -137,25 +142,27 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
             </article>
 
             <article id="slide02" class="slide fs info">
-                <div class="bcg"></div>
+                <div class="bcg" id="ddd"></div>
                 <div class="wrapper">
-                    <header class="slideInUp">
-                        <h1>Fear</h1>
-                    </header>
-                    <section>
-                        <p class="slideInUp slideInUp2">is not the rush you get when you send a risky text to the boy you like, or the distance that you leap in the air when</p>
-                        <p class="slideInUp slideInUp3">a spider crawls across your pillow, instead, fear is the wave of temporary paralysis that</p>
-                    </section>
                 </div> <!-- .wrapper -->
             </article>
 
             <article id="cb03" class="content-block info">
                 <div class="wrapper">
                     <header class="slideInUp">
-                        <h1>CONTENT WITH ANIMATION</h1>
+                        <h1>Dolls, Dresses, and Daisies</h1>
                     </header>
                     <section>
-                        <p class="slideInUp slideInUp2">More content, this time there's this subtle animation </p>
+                        <p class="slideInUp slideInUp2">
+                          <p class="c4 c5"><span class="c3"></span></p>
+                          <p class="c1"><span class="c3">Hide your Barbies in the cabinet and bring out your action figures, take off your mother&#39;s heels, and remove the ponytail from your hair. Although you are not embarrassed by these things, you do not want anyone to see them, especially not your dad. Wait for the house to be empty, then turn it into a runway. Strut through your living room in a beautiful gown and stilettos, pose and purse your lips, look at yourself in the mirror and ponder how much better you would look as a girl. Disregard that thought. When you are done, make sure to place everything back neatly. You cannot get caught in your mother&#39;s closet. </span></p>
+                          <p class="c4"><span class="c3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cut your hair short, stock up on clothes from the Gap boy&#39;s section, and replace your high-pitched and feminine tone with something deep and masculine. You cannot keep up your summer habits for the first day of school. Walk over to the boys and quickly think of a girl&rsquo;s name. Tell them about that girl you kissed last month and how smoking hot she was. Then run over to your girlfriends and spill about the cute boy you met. Dramatically roll your eyes and groan during dance class and pretend to be hurt during gym class. Save yourself from the embarrassment of your appalling basketball skills. </span></p>
+                          <p class="c4"><span class="c3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basketball shorts, oversized Nike tees, and Axe deodorant (all the other guys use it)&mdash;three of the most important things on your packing list for camp, you tell your mom. &nbsp;Be prepared and memorize a handful of popular rap songs. Catch yourself before you blurt out, &ldquo;OMG I missed you, Bobby, we&rsquo;re going to have so much fun this summer!&rdquo; Say &ldquo;What&rsquo;s up bro? How&#39;s it going?&rdquo; instead. Keep your eyes down in the shower house and change in the bathroom. Resist attending gossip sessions during free time and instead work on your hoops down by the court. Never pose in the mirror or express interest in the way you look. Remember, it&rsquo;s camp, and the guys never look in the mirror. &nbsp;</span></p>
+                          <p class="c1"><span class="c3">But you can&rsquo;t hide forever&mdash;it will come out someday. You only have one decision, and that is whether to live a life of silence or bravely and happily be who you are.</span></p>
+                          <p class="c4 c5"><span class="c3"></span></p>
+                          <p class="c5 c6"><span class="c3"></span></p>
+
+                        </p>
                     </section>
                 </div> <!-- .wrapper -->
             </article>
@@ -252,6 +259,10 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
             opacity: 1,
           });
 
+          var fade_tween = new TweenMax.to('#ddd',10.0, {
+            opacity: 0.2,
+          });
+
           // init controller
           var controller = new ScrollMagic.Controller({
             globalSceneOptions: {
@@ -277,9 +288,19 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
           .setTween(blur_tween)
           .setPin("#slide01")
 
+          var scene3 = new ScrollMagic.Scene({
+            triggerHook: 0,
+            triggerElement: "#ddd",
+            duration: "200%",
+            reverse: true
+          })
+          .setTween(fade_tween)
+          .setPin("#ddd")
+
           controller.addScene([
             scene1,
             scene2,
+            scene3,
           ]);
 
 
