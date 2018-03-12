@@ -434,16 +434,13 @@ nav {
   flex: 1;
 }
 
-.wrapper.imageTitle h1 {
-  text-align: center;
-}
 .wrapper.imageTitle p {
   text-align: justify;
 }
 
 .wrapper.imageTitle img{
-  margin: auto;
-  display: block;
+  float: left;
+  padding: 0 20px 20px 0;
   max-height:80vh;
   width: auto;
   height: auto;
