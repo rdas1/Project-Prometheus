@@ -219,7 +219,7 @@ h1 {
 /* =Header */
 
 .logo {
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 35%;
   -webkit-transform: translateX(-50%);
@@ -507,11 +507,6 @@ p {
 
   .content-block.speak2{
     background: #6e6761;
-    background: -webkit-linear-gradient(#6e6761, #a0a0a2);
-    background: -moz-linear-gradient(#6e6761, #a0a0a2);
-    background: -ms-linear-gradient(#6e6761, #a0a0a2);
-    background: -o-linear-gradient(#6e6761, #a0a0a2);
-    background: linear-gradient(#6e6761, #a0a0a2);
   }
 
   .speakTitle {
