@@ -192,8 +192,10 @@ textarea {
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 body {
-  font: 16px/1.5 'Raleway', Helvetica, Helvetica Neue, Arial, sans-serif;
-  background-color: #212121; }
+  font-family: 'Open Sans', sans-serif;
+  background-color: #283039;
+}
+
 
 .wrapper {
 
@@ -205,10 +207,11 @@ html, body {
   margin: 0; }
 
 h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2em;
   margin-top: 0;
-  font-family: 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
-  font-weight: 700; }
+  font-weight: 900;
+}
 
 /* ==========================================================================
    Author's custom styles
@@ -364,7 +367,7 @@ nav {
     -webkit-transition: all 0.2s cubic-bezier(.17, .67, .83, .67);
             transition: all 0.2s cubic-bezier(.17, .67, .83, .67); }
   nav.is-dark a {
-    color: #212121; }
+    color: #283039; }
   nav.is-dark .nav-dot {
     background-color: rgba(0, 0, 0, 0.5); }
   nav.is-light a {
@@ -465,11 +468,11 @@ p {
 
   .content-block.half-love {
     background-color: rgba(255, 255, 255, 0.9);
-    color: #000;
+    color: #283039;
   }
 
   .content-block .wrapper {
-    
+
     text-align: left;
   }
   .no-touch .content-block .wrapper {
@@ -563,7 +566,7 @@ p {
 
       margin: 0; }
     .slide#slide01, .slide#slide02, .slide#slide03 {
-      color: #212121;
+      color: #283039;
     }
       .slide#slide01 .wrapper, .slide#slide02 .wrapper, .slide#slide03 .wrapper {
         top: 20%;
@@ -612,7 +615,7 @@ p {
     .slide#slide03 .button {
       border-color: rgba(0, 0, 0, 0.7);
       background-color: transparent;
-      color: #212121; }
+      color: #283039; }
     .slide#slide03 .bcg {
       opacity: 1; }
   nav {
