@@ -315,10 +315,6 @@ h1 {
   #slide02 .bcg {
     background: url(../img/dolls_dresses_daises.jpg) no-repeat center center;
     background-size: cover; }
-  #slide03 .bcg {
-    background: no-repeat center center;
-    background-size: 80% 80%;
-    opacity: 0.7; }
 
 /* =Navigation */
 nav {
@@ -434,22 +430,6 @@ nav {
   flex: 1;
 }
 
-.wrapper.imageTitle p {
-  text-align: justify;
-}
-
-.wrapper.imageTitle img{
-  float: left;
-  padding: 0 20px 20px 0;
-  max-height:80vh;
-  width: auto;
-  height: auto;
-}
-
-.imageTitle {
-    padding: 30px 0;
-}
-
 p {
   font-size: 16px; }
 
@@ -489,7 +469,7 @@ p {
   }
 
   .content-block .wrapper {
-    padding: 30px 0;
+    
     text-align: left;
   }
   .no-touch .content-block .wrapper {
