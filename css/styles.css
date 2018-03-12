@@ -316,8 +316,8 @@ h1 {
     background: url(../img/dolls_dresses_daises.jpg) no-repeat center center;
     background-size: cover; }
   #slide03 .bcg {
-    background: url(../img/img_mountains03.jpg) no-repeat center center;
-    background-size: cover;
+    background: no-repeat center center;
+    background-size: 80% 80%;
     opacity: 0.7; }
 
 /* =Navigation */
@@ -434,6 +434,25 @@ nav {
   flex: 1;
 }
 
+.wrapper.imageTitle h1 {
+  text-align: center;
+}
+.wrapper.imageTitle p {
+  text-align: justify;
+}
+
+.wrapper.imageTitle img{
+  margin: auto;
+  display: block;
+  max-height:80vh;
+  width: auto;
+  height: auto;
+}
+
+.imageTitle {
+    padding: 30px 0;
+}
+
 p {
   font-size: 16px; }
 
@@ -445,7 +464,7 @@ p {
   position: relative; }
   .slide .wrapper {
     padding-top: 30px;
-    text-align: center;
+    text-align: left;
     position: absolute;
     z-index: 2; }
   .slide#slide01 .wrapper {
@@ -456,31 +475,11 @@ p {
     color: #ffffff;
     position: absolute;
     bottom: 10%; }
-  .slide#slide03 .button {
-    border-color: #ffffff;
-    color: #212121;
-    background-color: rgba(255, 255, 255, 0.9); }
-    .slide#slide03 .button:hover {
-      border-color: #212121;
-      background-color: #212121;
-      color: #ffffff; }
   .slide#slide03 .wrapper {
-    padding-top: 100px; }
+    color: #fff;
+    padding: 100px; }
   .slide#slide04 {
     background-color: #be4c2c; }
-
-.button {
-  text-decoration: none;
-  color: #ffffff;
-  border: 1px rgba(255, 255, 255, 0.7) solid;
-  padding: 8px 15px;
-  margin-top: 15px;
-  display: inline-block;
-  position: relative; }
-  .button:hover {
-    border-color: #ffffff;
-    background-color: #ffffff;
-    color: #000000; }
 
 /* =Content Block */
   .content-block{
@@ -489,12 +488,13 @@ p {
 
   .content-block.half-love {
     background-color: rgba(255, 255, 255, 0.9);
-    color: #212121;
+    color: #000;
   }
 
   .content-block .wrapper {
     padding: 30px 0;
-    text-align: left; }
+    text-align: left;
+  }
   .no-touch .content-block .wrapper {
     visibility: hidden;
     opacity: 0; }
@@ -590,7 +590,7 @@ p {
     }
       .slide#slide01 .wrapper, .slide#slide02 .wrapper, .slide#slide03 .wrapper {
         top: 20%;
-        text-align: center; }
+        text-align: left; }
       .slide#slide01 section, .slide#slide02 section, .slide#slide03 section {
         margin: 0 auto; }
 
@@ -626,10 +626,12 @@ p {
       top: 15%;
       -webkit-transform: translate(-50%, 0);
           -ms-transform: translate(-50%, 0);
-              transform: translate(-50%, 0); }
+              transform: translate(-50%, 0);
+      }
     .slide#slide03 section {
-      margin: 0 auto;
-      max-width: 570px; }
+      margin: 0;
+      text-align: center;
+    }
     .slide#slide03 .button {
       border-color: rgba(0, 0, 0, 0.7);
       background-color: transparent;
