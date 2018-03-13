@@ -2,7 +2,7 @@
     var o = new ScrollMagic.Controller,
         t = ["#slide01", "#slide02", "#slide03"],
         r = ["#slide01 header", "#slide02 header", "#slide03 header"],
-        n = ["#cb01", "#cb02", "#cb03", "#cb04", "#cb05", "#cb06", "#cb07", "#cb08"];
+        n = ["#cb01", "#cb02", "#cb03", "#cb04", "#cb05", "#cb06", "#cb07", "#cb08", "#cb09", "#cb10","#cb11","#cb12","#cb13","#cb14","#cb15","#cb16","#cb17",];
     if (!Modernizr.touch) {
         r.forEach(function(e, t) {
             {
