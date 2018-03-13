@@ -319,9 +319,11 @@ h1 {
     background: url(../img/dolls_dresses_daises.jpg) no-repeat center center;
     background-size: cover; }
 
-  #slide02 .bcg {
-    background: url(../img/dolls_dresses_daises.jpg) no-repeat center center;
-    background-size: cover; }
+
+  #slide14 .bcg {
+    min-height: 716px;
+    background: url(../img/silence.jpg) no-repeat center center;
+    background-size: contain; }
 
     .imageTitle img {
       max-width: 800px;
@@ -344,6 +346,11 @@ h1 {
 
 
     #cb05 img{
+      display:block;
+      margin:auto;
+    }
+
+    #cb10 img{
       display:block;
       margin:auto;
     }
@@ -463,6 +470,10 @@ nav {
   flex: 1;
 }
 
+#cb09 h1 {
+  text-align: center;
+}
+
 p {
   font-size: 16px; }
 
@@ -528,6 +539,31 @@ p {
   }
 
   .speakDesc {
+    text-align: center;
+    display: inline;
+  }
+
+  .content-block.pure1 {
+    background: #FFC5C4;
+    color: #fff;
+  }
+
+  .content-block.pure2{
+    background: #ffa299;
+  }
+
+  .pureTitle {
+    text-align: left;
+    display: inline;
+  }
+
+  .pureDescText{
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+
+  .pureDesc {
     text-align: center;
     display: inline;
   }
