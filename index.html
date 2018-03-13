@@ -209,13 +209,13 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
             </article>
 
             <article id="cb08" class="content-block">
-                  <div class="imageTitle">
+                  <div class="controlImage">
                       <header class="slideInUp">
-                          <div class="clearfix">
-                              <p style="float: left; padding-left: 0px; padding-right:30px;"><img src="./img/cease_to_control.jpg"/></p>
+                        <img src="./img/cease_to_control.jpg" style="float: left; padding-left: 0px; padding-right:30px; width=20%; height: auto;"/>
+                          <div class="clearfix" id="controlText" style="opacity:0">
                                <div class="wrapper imageText">
-                                 <h1 class="slideInUp"<span style="color: #2fcdc0">TITLE</span></h1>
-                                 <p class="slideInUp2" style="text-align: justify;">by Reed Lastname</p>
+                                 <h1 class="slideInUp"<span style="color: #2fcdc0">CEASE TO CONTROL</span></h1>
+                                 <p class="slideInUp2" style="text-align: justify;">by Author Authorson</p>
                                  <p class="slideInUp2" style="text-align: justify;"><i>Lorem ipsum dolor sit amet, an mollis legimus copiosae est, quas viderer habemus mei ei. Cetero indoctum dissentias mea no, quo ceteros pericula te. Malis disputationi eos ne. Meliore splendide ne nam, eam quem voluptua copiosae ad. Meis possim eos ei, mei ex volumus molestie consectetuer. Legimus imperdiet ut eum, purto admodum accusamus ut quo.
                                    No elitr aliquam vis, ad minim essent mea. An cum commodo euismod. Magna tempor adolescens an mel. At vim magna vivendo expetenda.</i></p>
                                </div>
@@ -224,21 +224,6 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
                   </div> <!-- .wrapper -->
             </article>
 
-            <article id="cb09" class="content-block">
-                  <div class="imageTitle">
-                      <header class="slideInUp">
-                          <div class="clearfix">
-                              <p style="float: left; padding-left: 0px; padding-right:30px;"><img src="http://placekitten.com/g/800/600"></p>
-                               <div class="wrapper imageText">
-                                 <h1 class="slideInUp"<span style="color: #2fcdc0">TITLE</span></h1>
-                                 <p class="slideInUp2" style="text-align: justify;">by Reed Lastname</p>
-                                 <p class="slideInUp2" style="text-align: justify;"><i>Lorem ipsum dolor sit amet, an mollis legimus copiosae est, quas viderer habemus mei ei. Cetero indoctum dissentias mea no, quo ceteros pericula te. Malis disputationi eos ne. Meliore splendide ne nam, eam quem voluptua copiosae ad. Meis possim eos ei, mei ex volumus molestie consectetuer. Legimus imperdiet ut eum, purto admodum accusamus ut quo.
-                                   No elitr aliquam vis, ad minim essent mea. An cum commodo euismod. Magna tempor adolescens an mel. At vim magna vivendo expetenda.</i></p>
-                               </div>
-                          </div>
-                      </header>
-                  </div> <!-- .wrapper -->
-            </article>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -289,6 +274,10 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
             opacity: 0,
           });
 
+          var control_tween = new TweenMax.to('#controlText',5.0, {
+            opacity: 1,
+          });
+
           // init controller
           var controller = new ScrollMagic.Controller({
             globalSceneOptions: {
@@ -323,10 +312,20 @@ No cum constituam appellantur. Usu amet solet nonumes eu. In tale choro adversar
           .setTween(fade_tween)
           .setPin("#ddd")
 
+          var scene4 = new ScrollMagic.Scene({
+            triggerHook: 0,
+            triggerElement: "#cb08",
+            duration: "200%",
+            reverse: true
+          })
+          .setTween(control_tween)
+          .setPin("#cb08")
+
           controller.addScene([
             scene1,
             scene2,
             scene3,
+            scene4,
           ]);
 
 
